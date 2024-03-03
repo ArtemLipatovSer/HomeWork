@@ -1,0 +1,47 @@
+.head {
+    width: 500px;
+    height: 50px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+select {
+    width: 100px;
+}
+
+#btnHead {
+    width: 100px;
+}
+
+form {
+    width: 500px; 
+    background-color: antiquewhite;
+    padding-top: 25px;
+    text-align: center;
+}
+
+form label {
+    margin-left: 20px;
+}
+
+#topic {
+    width: 400px;
+}
+
+table {
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+th {
+    width: 200px;
+}
+
+.btnSub {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 20px;
+}

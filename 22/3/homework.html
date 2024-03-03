@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Введите пароль:</label>
+        <input type="text" name="pas" id="pas" required>
+        <button type="submit">Отправить</button>
+    </form>
+    <script>
+        let form = document.querySelector('form')
+        form.addEventListener('submit', function(e){
+            e.preventDefault()
+            let p = pas.value
+            const Regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/
+            if (Regex.test(p)){
+                alert('Пароль введен корректно')
+            }
+            else {
+                alert('Пароль введен некорректно')
+            }
+        })
+    </script>
+</body>
+</html>

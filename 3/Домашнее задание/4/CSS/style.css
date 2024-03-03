@@ -1,0 +1,53 @@
+.frame {
+    background-color: rgb(19, 57, 102);
+    height: 200px;
+    color: white;
+    position: fixed;
+}
+
+.textOne {
+    border-bottom: 2px solid;
+    padding-left: 50px;
+    height: 100px;
+    width: 150px;
+    padding-top: 40px;
+    float: left;
+}
+
+.pictOne {
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+.pictTwo {
+    margin-top: 20px;
+    height: 30px;
+    float: left;
+    padding-left: 10px;
+}
+
+.pictThree {
+    margin-top: 20px;
+    height: 30px;
+    float: left;
+    padding-left: 10px;
+}
+
+.pictOne:hover {
+    content: url(/img/fb.png);
+}
+
+.pictTwo:hover {
+    content: url(/img/insta.png);
+}
+
+.pictThree:hover {
+    content: url(/img/youtube.png);
+}
+
+p {
+    text-align: center;
+    font-size: smaller;
+}

@@ -1,0 +1,22 @@
+div {
+    background: #fdb6b7;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+}
+li {
+    background: rgb(196, 112, 114);
+    margin-top: 10px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    padding: 1%;
+}
+li span {
+        background: #c94b4b;
+        padding: 1%;    
+}
+ol {
+    list-style-position: inside;
+  }
+
+

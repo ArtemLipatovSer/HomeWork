@@ -1,0 +1,27 @@
+div {
+    background-color: gray;
+    width: 400px;
+    height: 150px;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid red;
+    /* display: none; */
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+
+p {
+    padding: 0px;
+    font-size: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    float: right;
+    margin-right: 30px;
+}

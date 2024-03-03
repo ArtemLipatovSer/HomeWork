@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="block">
+        <div id="add"></div>
+        <form id="forms">
+            <h4 style="text-align: center; padding-top: 10px; margin: 5px;">Add messge:</h4>
+            <label style="margin-right: 25px;">Your name:</label>
+            <input type="text" id="nick" required style="width: 91%;">
+            <label style="vertical-align: 80%;">Your message:</label>
+            <textarea name="msg" id="msg" required></textarea>
+            <button type="submit" id="app">Send</button>
+        </form>
+    </div>
+    <script>
+        let form = document.querySelector('form')
+        document.querySelector('#forms')
+                .addEventListener('submit', 
+                                function(e){
+                                    e.preventDefault() 
+                                    if ((nick.value == '') || (msg.value == '')){
+                                        return 0
+                                    }
+                                    
+                                    let textName = document.createElement("div")
+                                    textName.className = 'addName'
+                                    textName.innerHTML = nick.value
+                                    add.appendChild(textName)
+                                    nick.value = ''
+
+                                    let textMsg = document.createElement("div")
+                                    textMsg.className = 'addMsg'
+                                    textMsg.innerHTML = msg.value
+                                    console.log(textMsg)
+                                    add.appendChild(textMsg)
+                                    msg.value = ''
+                                })
+    </script>
+</body>
+</html>

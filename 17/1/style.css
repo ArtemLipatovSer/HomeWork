@@ -1,0 +1,13 @@
+.all {
+    width: 500px;
+    height: 100px;
+    border: 2px solid;
+    text-align: center;
+    display:grid;
+}
+
+.win {
+    height: 20px;
+    width: 300px;
+    margin-left: 95px;
+}

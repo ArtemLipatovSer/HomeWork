@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 700px;
+            height: 300px;
+            background-color: antiquewhite;
+            display: flex;
+            align-items: center;
+            
+        }
+        
+        img {
+            height: 200px;
+            margin: auto;
+        }
+
+        button {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        #left {
+            background: url(img/влево.png) 50% 50% no-repeat;
+            background-size: contain;
+            width: 50px;
+            height: 50px;
+            border:none;
+        }
+
+        #right {
+            background: url(img/вправо.png) 50% 50% no-repeat;
+            background-size: contain;
+            width: 50px;
+            height: 50px;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="left"></button>
+        <img id="pict" src="img/0ebd262c4b7f69f7ec915dbd8509328f.jpg" alt="no pict">
+        <button id="right"></button>
+    </div>
+    <script>
+        let picts=[
+            'http://127.0.0.1:5500/img/images (1).jpg',
+            'http://127.0.0.1:5500/img/images.jpg',
+            'http://127.0.0.1:5500/img/0ebd262c4b7f69f7ec915dbd8509328f.jpg',
+            'http://127.0.0.1:5500/img/pict1.jpg'
+        ]
+        let pict = document.querySelector('#pict')
+        let btnLeft = document.querySelector('#left')
+        let btnRight = document.querySelector('#right')
+        let index = 2;
+        
+        btnLeft.addEventListener('click', ()=>{
+            index --
+            if (index < 0){
+                return index = 0
+            }
+            
+            for(let i=0; i <= picts.length; i++){
+                pict.src = picts[index]
+            }
+        })
+
+        btnRight.addEventListener('click', ()=>{
+            index ++
+            if (index > 3){
+                return index = 3
+            }
+            for(let i=0; i <= picts.length; i++){
+                pict.src = picts[index]
+            }
+            
+        })
+    </script>
+</body>
+</html>

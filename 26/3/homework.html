@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arrStyles = [
+            {
+                name: 'color',
+                meaning: 'red'
+            },
+            {
+                name: 'font-size',
+                meaning: 18
+            },
+            {
+                name: 'text-decoration',
+                meaning: 'underline'
+            }
+        ]
+
+        function textStyle (arr, text){
+            document.write(`<p style='${arrStyles[0].name}: ${arrStyles[0].meaning}; ${arrStyles[1].name}: ${arrStyles[1].meaning}px;
+                            ${arrStyles[2].name}: ${arrStyles[2].meaning};'>${text}</p>`)
+        }
+        let text = "Hello, World"
+        textStyle(arrStyles, text)
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+dt{
+    font-style: italic;
+}
+li dt {
+    color: grey;
+    font-style:normal
+}
+.textBlue{
+    color: blue;
+}

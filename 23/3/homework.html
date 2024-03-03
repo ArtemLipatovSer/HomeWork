@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <div>
+            <input name='stl' class='stl' data-st="font-weight: bold" type="checkbox">Bold
+            <input name='stl' class='stl' data-st="text-decoration: underline" type="checkbox">Underline
+            <input name='stl' class='stl' data-st="font-style: italic" type="checkbox">Italics
+            <input name='stl' class='stl' data-st="text-align: left" type="radio">Left
+            <input name='stl' class='stl' data-st="text-align: right" type="radio">Right
+            <input name='stl' class='stl' data-st="text-align: justify" type="radio">Justify
+        </div>
+        <div>
+            <textarea id="text"></textarea>
+        </div>
+        <button type="submit">Show text</button>
+    </form>
+    <div class="block">
+        <h3 style="padding:10px; padding-bottom: 0px;" >Result:</h3>
+        <div class="txt">
+
+        </div>
+    </div>
+    <script>
+        let form = document.querySelector('form')
+        let stl = document.querySelectorAll('.stl')
+        let text = document.querySelector('#text')
+        let txt = document.querySelector('.txt')
+        
+        form.addEventListener('submit', function(e){
+            e.preventDefault()
+            txt.style = ''
+            txt.style.display = 'block'
+
+            stl.forEach(element => {
+                if(element.checked){
+                    txt.style.cssText += element.dataset.st
+                }   
+            })
+            
+            txt.innerHTML = text.value
+            text.value = ''
+        }) 
+    </script>
+</body>
+</html>
+

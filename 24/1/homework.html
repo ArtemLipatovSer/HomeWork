@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block {
+            width: 500px;
+            background-color: antiquewhite;
+            height: 70px;
+            margin: auto;
+            display: flex;
+        }
+
+        .line {
+            width: 400px;
+            height: 20px;
+            background-color: gray;
+            margin: auto;
+        }
+
+        .cube {
+            width: 25px;
+            height: 25px;
+            background-color: blue;
+            position: absolute;
+            top: 30px;
+            transition: 1s;            
+        }
+
+        input {
+            width: 450px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="block">
+        <div class="line">
+            <div class="cube"></div>
+        </div>
+    </div>
+
+    <script>
+        let line = document.querySelector('.line')
+        let cube = document.querySelector('.cube')
+        line.addEventListener('click', function(e){
+            cube.style.left = `${e.clientX}px`            
+        })
+    </script>
+</body>
+</html>

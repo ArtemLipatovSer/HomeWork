@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="test">
+        <div>
+            <p>1 How many letters are there in the world "Hello"</p>
+            <input name="intOne" class = "all" type="radio">5 <br>
+            <input name="intOne" class = "all" type="radio">2<br>
+            <button type="button" id="btn">Next</button>
+        </div>
+        
+        <div id="winTwo">
+            <p>2 How many letters are there in the world "World"</p>
+            <input name="intTwo" class = "all" type="radio">4 <br>
+            <input name="intTwo" class = "all" type="radio">5
+            <button type="submit">Finish</button>
+        </div>
+        <div id="result"></div>
+    </form>
+
+    <script>
+        let form = document.querySelector('form')
+        let btn = form.querySelector('#btn')
+        let winTwo = form.querySelector('#winTwo')
+        let result = form.querySelector('#result')
+        let corr = 0;
+        let notCorr = 0;
+
+        btn.addEventListener('click', function(){
+            winTwo.style.display = 'block'
+        })
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault()
+            let all = form.querySelectorAll('.all')
+
+            for (let i=0; i < all.length; i++){
+                if(all[0].checked && all[3].checked){
+                    corr = 2 
+                }
+                else if(all[0].checked || all[3].checked){
+                    corr=1
+                    notCorr = 1 
+                }
+                else {
+                    notCorr = 2
+                }
+            }
+            
+            result.innerHTML = "Правильных ответов - " + corr + ", не правильных ответов - " + notCorr
+            result.style.display = 'block'
+        })
+    </script>
+</body>
+</html>

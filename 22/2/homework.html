@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            display: flex;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Введите свое имя:</label>
+        <input type="text" name="n" id="n" required>
+        <label>Введите номер телефона:</label>
+        <input name="numberPhone" id="numberPhone" required>
+        <button type="submit">Отправить</button>
+    </form>
+    <div id="info"></div>
+    <script>
+        let form = document.querySelector('form')
+        form.addEventListener('submit', function(e){
+            e.preventDefault()
+            let num = numberPhone.value
+            let nam = n.value
+            const Regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+            if(Regex.test(num)){
+                info.innerHTML = nam + ' ' + num
+            }
+            else {
+                const Reg = /[^+\d]/g
+                num = num.replace(Reg, '')
+                info.innerHTML = nam + ' ' + num
+            }
+        })
+    </script>
+</body>
+</html>

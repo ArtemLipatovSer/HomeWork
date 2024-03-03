@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form>
+            <h3>Create new color</h3>
+            <label>Color</label>
+            <input type="text" id="textColor" required>
+            <label>Type</label>
+            <select id="typeColor">
+                <option>RGB</option>
+                <option>RGBA</option>
+                <option>HEX</option>
+            </select>
+            <label>Code</label>
+            <input type="text" required>
+            <button type="submit">Save</button>
+        </form>
+
+        <div class="colorBlock" style="background-color: yellowgreen;">
+            <div class="blockLight" style="background-color: rgb(209, 226, 156);">
+                <p>YELLOWGREEN</p>
+                <p>RGB</p>
+                <p>154,205,50</p>
+            </div>
+        </div>
+        <div class="colorBlock" style="background-color: darkcyan;">
+            <div class="blockLight" style="background-color: rgb(184, 230, 230);">
+                <p>YELLOWGREEN</p>
+                <p>RGB</p>
+                <p>154,205,50</p>
+            </div>
+        </div>
+        <div class="colorBlock" style="background-color: orangered;">
+            <div class="blockLight" style="background-color: rgb(236, 189, 172);">
+                <p>YELLOWGREEN</p>
+                <p>RGB</p>
+                <p>154,205,50</p>
+            </div>
+        </div>
+    </div>
+    <script src="myscript.js"></script>
+</body>
+</html>

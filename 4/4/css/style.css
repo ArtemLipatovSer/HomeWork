@@ -1,0 +1,49 @@
+table {
+    border-collapse: collapse;
+    vertical-align: middle;
+    text-align: center;
+}
+
+th {
+    border: 1px solid black;
+    width: 15%;
+}
+
+td {
+    border: 1px solid black;
+    height: 20px;
+}
+
+.one {
+    font-weight: bold;
+}
+
+.two {
+    font-style: italic;
+    text-align: left;
+    font-size: small;
+}
+
+.three td {
+    font-style: italic;
+}
+
+.col-1 {
+    background-color: yellow;
+}
+
+.col-2 {
+    background-color: rgb(158, 158, 248);
+}
+
+.col-3 {
+    background-color: rgb(242, 142, 142);
+}
+
+.col-4 {
+    background-color: rgb(120, 237, 120);
+}
+
+.col-5 {
+    background-color: rgb(180, 78, 155);
+}

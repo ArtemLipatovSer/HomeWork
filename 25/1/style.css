@@ -1,0 +1,53 @@
+.wrapper {
+    width: 50em;
+    background-color: antiquewhite;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 250px;
+    padding: 0px;
+    height: 25px;
+    margin: 5px;
+}
+
+select {
+    width: 250px;
+    margin: 5px;
+    height: 30px;
+}
+
+label {
+    position: relative;
+    left: -110px;
+}
+
+button {
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 10px;
+}
+
+.colorBlock {
+    width: 150px;
+    text-align: center;
+    height: 100px;
+    display: inline-flex;
+    margin: 10px;
+}
+
+.blockLight {
+    width: 90px;
+    margin:auto;
+    vertical-align: middle;
+}
+

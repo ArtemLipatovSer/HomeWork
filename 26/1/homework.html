@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let shopList = [
+            {
+                name: 'Хлеб',
+                quantity: 2,
+                buy: true
+            },
+            {
+                name: 'Масло',
+                quantity: 1,
+                buy: false
+            },
+            {
+                name: 'Вода',
+                quantity: 5,
+                buy: true
+            }
+        ]
+
+        function one (arr){
+            arr.sort((a, b) => a.buy > b.buy ? -1 : 1);
+        }
+
+        one(shopList)
+
+        function two (arr){
+            let newObj = {}
+            newObj.name = prompt('Введите название продукта: ')
+            newObj.quantity = parseInt(prompt('Введите количество продукта: '))
+            newObj.buy = false
+            let count = 0
+            for(let i in arr){
+                if (arr[i].name == newObj.name){
+                    arr[i].quantity = arr[i].quantity + newObj.quantity
+                    count = 2
+                }
+            }
+            if (count != 2){
+                    arr.push(newObj)
+                    count = 2 
+            }
+        }
+
+        two(shopList)
+        
+        function buyProduct (name){
+            for (let el in shopList){
+                if(shopList[el].name == name){
+                    shopList[el].buy = true
+                }
+            }
+        }
+
+        buyProduct('Масло')
+        
+    </script>
+</body>
+</html>

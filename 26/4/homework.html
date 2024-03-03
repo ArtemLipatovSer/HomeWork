@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        audience = [
+            {
+                name: 'B-audience',
+                place: 10,
+                faculty: 'JS'
+
+            },
+            {
+                name: 'D-audience',
+                place: 18,
+                faculty: 'JS'
+            },
+            {
+                name: 'A-audience',
+                place: 15,
+                faculty: 'Python'
+            }, 
+            {
+                name: 'C-audience',
+                place: 20,
+                faculty: 'Python'
+            }, 
+        ]
+
+        function print (arr){
+            document.write('Список айдиторий:<br \/><br \/>')
+            for(let el in arr){
+                document.write(`Название аудитории - ${arr[el].name}<br \/>
+                                Количество посадочных мест - ${arr[el].place}<br \/>
+                                Факультет - ${arr[el].faculty}<br \/><br \/>`)
+            }
+        }
+
+        print(audience)
+
+        function specifiedFaculty (arr, a){
+            document.write('Список айдиторий по факультету:<br \/><br \/>')
+            for(let el in arr){
+                if (arr[el].faculty == a){
+                    document.write(`Название аудитории - ${arr[el].name}<br \/>
+                                Количество посадочных мест - ${arr[el].place}<br \/>
+                                Факультет - ${arr[el].faculty}<br \/><br \/>`)
+                }
+            }
+        }
+
+        specifiedFaculty(audience, 'Python')
+
+        students = {
+                name: '3 курс',
+                quantityStud: 17,
+                faculty: 'Python'
+                }
+
+        function studentsSpec (arr, a){
+            document.write('Список подходящих для группы аудиторий:<br \/><br \/>')
+            for(let el in arr){
+                if (a.quantityStud <= arr[el].place && a.faculty == arr[el].faculty){
+                    document.write(`Название аудитории - ${arr[el].name}<br \/>
+                                Количество посадочных мест - ${arr[el].place}<br \/>
+                                Факультет - ${arr[el].faculty}<br \/><br \/>`)
+                }
+            }
+        }
+
+        studentsSpec(audience, students)
+
+        function audienceSort (arr){
+            arr.sort((a, b) => a.place > b.place ? 1 : -1)
+            document.write('Список отсортированных аудиторий:<br \/><br \/>')
+            for(let el in arr){
+                document.write(`Название аудитории - ${arr[el].name}<br \/>
+                                Количество посадочных мест - ${arr[el].place}<br \/>
+                                Факультет - ${arr[el].faculty}<br \/><br \/>`)
+            }
+        }
+
+        audienceSort(audience, students)
+
+        function audienceSortName (arr){
+            arr.sort((a, b) => a.name > b.name ? 1 : -1)
+            document.write('Список отсортированных аудиторий по названию:<br \/><br \/>')
+            for(let el in arr){
+                document.write(`Название аудитории - ${arr[el].name}<br \/>
+                                Количество посадочных мест - ${arr[el].place}<br \/>
+                                Факультет - ${arr[el].faculty}<br \/><br \/>`)
+            }
+        }
+
+        audienceSortName(audience, students)
+
+    </script>
+</body>
+</html>

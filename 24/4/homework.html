@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block {
+            width: 600px;
+            height: 250px;
+            background-color: antiquewhite;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <div style="font-size: 35px;">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus veritatis laborum, nam obcaecati perspiciatis et deserunt. Rem iusto, consequatur nesciunt quibusdam enim molestiae esse dolor velit porro placeat saepe quis.
+        </div>
+        <div style="font-size: 35px;">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus veritatis laborum, nam obcaecati perspiciatis et deserunt. Rem iusto, consequatur nesciunt quibusdam enim molestiae esse dolor velit porro placeat saepe quis.
+        </div>
+    </div>
+
+    <script>
+        let block = document.querySelector('.block')
+        let arr = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur']
+        let index = 0;
+        block.addEventListener('scroll', (e)=>{
+            if(block.clientHeight + (block.scrollTop+1) >= block.scrollHeight){
+                let newBlock = document.createElement('div')
+                block.appendChild(newBlock)
+                for (let i=0; i < arr.length; i++){
+                    newBlock.innerHTML = arr[index]
+                } 
+                index += 1
+            }
+        }) 
+    </script>
+</body>
+</html>

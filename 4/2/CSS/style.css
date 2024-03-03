@@ -1,0 +1,56 @@
+.menucolumn {
+    background-color: gray;
+    width: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: white;
+}
+
+.menubar {
+    list-style: none;
+    padding-left: 0;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+span {
+    padding-left: 40px;
+    display: none;
+}
+
+li:hover  {
+    background-color: rgb(62, 57, 57);
+    transition: 1s;
+}
+
+.menubar:hover span {
+    transition: 1s;
+    display: block;
+    
+}
+
+.menucolumn:hover {
+    width: 240px;
+    transition: 1s;
+}
+
+p {
+    padding-left: 20px;
+}
+
+div {
+    padding-left: 140px;
+}

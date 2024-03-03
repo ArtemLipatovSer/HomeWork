@@ -1,0 +1,51 @@
+.block {
+    width: 100%;
+    background-color: antiquewhite;
+    height: auto;
+    padding-top: 10px;
+}
+
+textarea {
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 91.1%;
+    height: 50px;
+}
+
+label {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+button {
+    margin: 10px;
+    width: 98.5%;
+    padding: 5px;
+}
+
+.addName {
+    width: 98%;
+    height: auto;
+    background-color: antiquewhite;
+    border: solid 1px gray;
+    border-bottom: dashed 1px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.addMsg {
+    width: 98%;
+    height: auto;
+    background-color: antiquewhite;
+    border: solid 1px gray;
+    border-top: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin: 10px;
+    margin-top: 0;
+}
+

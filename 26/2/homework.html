@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        salesReceipt = [
+            {
+                name: 'Хлеб',
+                quantity: 2,
+                price: 50
+            },
+            {
+                name: 'Масло',
+                quantity: 3,
+                price: 150
+            },
+            {
+                name: 'Вода',
+                quantity: 6,
+                price: 30
+            }
+        ]
+
+        function printSalesReceipt (arr){
+            document.write('Товарный чек:<br \/>')
+            for(let el in arr){
+                document.write(`Название продукта - ${arr[el].name}<br \/>
+                                Количество - ${arr[el].quantity}<br \/>
+                                Стоимость единицы товара - ${arr[el].price}<br \/><br \/>`)
+            }
+        }
+
+        printSalesReceipt(salesReceipt)
+
+        function purchaseAmount(arr){
+            let result = 0
+            for(let el in arr){
+                result = result + ((parseInt(arr[el].quantity) * parseInt(arr[el].price))); 
+            }
+            document.write(`<br \/>Общая сумма покупки - ${result}<br \/>`)
+        }
+
+        purchaseAmount(salesReceipt)
+
+        function maxPrice (arr){
+            let max = 0
+            for(let el in arr){
+                if ((arr[el].price * arr[el].quantity) > max){
+                    max = (arr[el].price * arr[el].quantity) 
+                }
+            }
+            document.write(`<br \/>Самая дорогая покупка - ${max}<br \/>`)
+        }
+
+        maxPrice(salesReceipt)
+
+        function averagePrice (arr){
+            let average = 0
+            for(let el in arr){
+                average = average + (parseInt(arr[el].quantity) * parseInt(arr[el].price)); 
+            }
+            document.write(`<br \/>Средняя стоимость товара в чеке - ${average / arr.length}<br \/>`)
+        }
+
+        averagePrice(salesReceipt)
+    </script>
+</body>
+</html>

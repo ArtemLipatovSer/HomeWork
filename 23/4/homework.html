@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="book">
+            <img src="img/book1.jpg" alt="no foto">
+            <div class="info">
+                <h3 class="txt">Learning JavaScript JavaScript Essentials for Modern Application Development</h3>
+                <p>Athan Brown</p>
+                <h2>16$</h2>
+            </div>
+            <button class='btnBook' type="button">Select1</button>
+        </div>
+        <div class="book">
+            <img src="img/book2.jpg" alt="no foto">
+            <div class="info">
+                <h3 class="txt">You Don't Know JS: Scope & Closures</h3>
+                <p>Kyle Simpson</p>
+                <h2>20$</h2>
+            </div>
+            <button class='btnBook' type="button">Select2</button>
+        </div>
+        <div class="book">
+            <img src="img/book3.jpg" alt="no foto">
+            <div class="info">
+                <h3 class="txt">JavaScript and JQuery Interactive Front-Fnd Web Development</h3>
+                <p>Jon Duckett</p>
+                <h2>22$</h2>
+            </div>
+            <button class='btnBook' type="button">Select3</button>
+        </div>
+
+        <form>
+            <div>
+                <label>Book:</label>
+                <input id="nameBook" type="text" disabled required>
+            </div>
+            <div>
+                <label>Quantity:</label>
+                <input id="quantity" type="number" required>
+            </div>
+            <div>
+                <label>Name:</label>
+                <input id="name" type="text" required>
+            </div>
+            <div>
+                <label>Delivery address:</label>
+                <textarea id="address"></textarea>
+            </div>
+            <div>
+                <label>Dilivery date:</label>
+                <input id="dataDeliv" type="date" required>
+            </div>
+            <div>
+                <label>Comment:</label>
+                <textarea id="comment"></textarea>
+            </div>
+            <button class="btnSub" type="submit">Select</button>
+        </form>
+    </div>
+    <div id="wrapConc">
+        <h5 style="margin: 10px 0 0 50px">Result:</h5>
+        <div id="conclusion"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
